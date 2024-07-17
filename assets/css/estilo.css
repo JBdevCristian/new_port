@@ -2,6 +2,8 @@ body {
     background: #000000;
     color: white;
     height: 100vh;
+    text-decoration: none;
+    display: flex;
 }
 
 
@@ -38,6 +40,11 @@ body {
     width: 175px;
 }
 
+.bloco img {
+    margin-left: 13px;
+    width: 150px;
+}
+
 .bloco-foto p{
     font-size: 14px;
     background-color: #474747;
@@ -47,10 +54,67 @@ body {
 
 
 .fundo1 h4{
+    display: flex;
     font-size: 16px;
 }
 
+
 .contatos div {
-    background-color: white;
+    padding-left: 40px;
     margin-bottom: 25px;
 }
+
+.contatos h4 {
+    color: #969696;
+}
+
+.contatos P {
+    font-size: 14px;
+}
+
+.social i {
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+/*Parte 2*/
+
+.fundo-nav {
+    background-color: #464646;
+    border-radius: 0 25px 0 15px;
+    padding: 5px;
+    margin-top: -7px;
+    border: 1px solid rgb(68, 68, 68);
+}
+
+.fundo-nav a {
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.fundo-nav a:active {
+    color: rgb(255, 201, 99);
+}
+.fundo-nav a:hover {
+    color: rgb(255, 201, 99);
+}
+
+/*Sobre mim*/
+
+.sobre-mim {
+    font-size: 14px;
+}
+
+.position {
+    margin-left: 15px;
+    margin-top: -30px;
+}
+
+ .barra {
+    background-color: rgb(255, 185, 56);
+    height: 3px;
+    width: 40px;
+ }
+
