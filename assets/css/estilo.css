@@ -105,7 +105,7 @@ body {
 /*Sobre mim*/
 
 .sobre-mim {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .position {
@@ -131,7 +131,7 @@ body {
     color: white;
     background-color: rgb(36, 36, 36);
     border-radius: 15px;
-    height: 145px;
+    height: 160px;
     width: 395px;
     border-top: 1px solid rgb(109, 109, 109);
     -webkit-box-shadow: 1px 18px 5px 0px rgba(0,0,0,0.35);
@@ -140,7 +140,7 @@ body {
  }
 
 .habilidades p {
-    font-size: 12px;
+    font-size: 13px;
     color: #ccc;
 }
 
