@@ -129,6 +129,7 @@ body {
 /*Sobre mim*/
 
 .sobre-mim {
+    margin-top: 30px;
     font-size: 15px;
 }
 
@@ -147,7 +148,7 @@ body {
  /* Doing */
  .bloco-perfil {
     height: 150px;
-    width: 400px;
+    width: 100%;
     margin-bottom: 45px;
  }
 

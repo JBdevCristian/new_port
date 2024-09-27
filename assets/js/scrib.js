@@ -1,7 +1,4 @@
-document.getElementById('sobre-script').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-    
-    // Define o conteúdo HTML que será inserido
+function loadDefaultContent() {
     const sobreMimHTML = `
     <div class="sobre-mim" id="sobre-mim"> 
         <div class="position">
@@ -101,17 +98,122 @@ document.getElementById('sobre-script').addEventListener('click', function(event
         </div>
     </div>
     `;
-
-    // Insere o HTML na div com id "conteudo"
     document.getElementById('conteudo').innerHTML = sobreMimHTML;
+}
+
+// Função para alternar entre as seções
+function loadContent(contentHTML) {
+    document.getElementById('conteudo').innerHTML = contentHTML;
+}
+
+// Adiciona eventos para as seções
+document.getElementById('sobre-script').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    loadContent(`
+        <div class="sobre-mim" id="sobre-mim"> 
+        <div class="position">
+            <h2 class="">Sobre mim</h2>
+            <div class="barra"></div>
+        </div>
+        <div class="container">
+            <p class="mt-4">
+                Olá! Sou o Cristian, aos 22 anos, focado e apaixonado pelo desenvolvimento front-end. Tenho uma abordagem meticulosa ao transformar conceitos em designs web envolventes. Com um olhar atento às tendências, estou sempre pronto para colaborar e elevar projetos ao próximo nível. Estou à disposição para contribuir e inovar.
+            </p>
+            <p>
+                Gosto de me manter atualizado e aprender novas tecnologias e habilidades. Por isso, frequentemente realizo cursos online para expandir meu conhecimento.
+            </p>
+
+            <div> 
+                <h3 class="mt-4">Skills</h3> 
+                <div class="barra mb-3"></div>
+                <div class="row ms-2"> 
+                    <div class="col">
+                        <div class="bloco-perfil">
+                            <div class="card habilidades">
+                                <div class="card-body">
+                                    <div class="row d-flex">
+                                        <div class="col-2">
+                                            <i class="fa-brands fa-github fa-2xl mt-4 ms-3" style="color: rgb(255, 185, 56);"></i>
+                                        </div>
+                                        <div class="col-9">
+                                            <h5> Git e Open Source</h5>
+                                        </div>
+                                        <div class="col-9 offset-md-2">
+                                            <p class="text-start">Tenho experiência em utilizar a linha de comando, Git e GitHub. Além disso, contribuí com documentação e código para projetos open source.</p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bloco-perfil">
+                            <div class="card habilidades">
+                                <div class="card-body">
+                                    <div class="row d-flex">
+                                        <div class="col-2">
+                                            <i class="fa-regular fa-lightbulb fa-2xl mt-4 ms-3" style="color: rgb(255, 185, 56);" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-9">
+                                            <h5>Aprendizado Continuo</h5>
+                                        </div>
+                                        <div class="col-9 offset-md-2">
+                                            <p class="text-start">Gosto de me manter atualizado e aprender novas tecnologias e habilidades. Por isso, frequentemente realizo cursos online para expandir meu conhecimento.</p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bloco-perfil">
+                            <div class="card habilidades">
+                                <div class="card-body">
+                                    <div class="row d-flex">
+                                        <div class="col-2">
+                                            <i class="fa-solid fa-plane fa-2xl mt-4 ms-3" style="color: rgb(255, 185, 56);" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-9">
+                                            <h5>Conhecimento em Linguas.</h5>
+                                        </div>
+                                        <div class="col-9 offset-md-2">
+                                            <p class="text-start">Habilidade intermediária em inglês, com prática em leitura e oratória. Interessado em viagens internacionais a trabalho.</p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bloco-perfil">
+                            <div class="card habilidades">
+                                <div class="card-body">
+                                    <div class="row d-flex">
+                                        <div class="col-2">
+                                            <i class="fa-solid fa-diagram-project fa-2xl mt-4 ms-3"  style="color: rgb(255, 185, 56);"></i>
+                                        </div>
+                                        <div class="col-9">
+                                            <h5>Gestão de projetos</h5>
+                                        </div>
+                                        <div class="col-9 offset-md-2">
+                                            <p class="text-start" style="font-size: 13px;">Como desenvolvedor web, tenho experiência em gerenciamento de projetos por meio de atividades freelancer, onde crio e administro projetos para clientes, garantindo qualidade e prazos.</p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    `);
 });
 
 document.getElementById('resumo-script').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-    
-    // Define o conteúdo HTML que será inserido
+    event.preventDefault(); 
     const resumoExHTML = `
-    <div class="resumo-experiencia" id="resumo-experiencia"> 
+    <div class="sobre-mim" id="sobre-mim"> 
                                     <div class="position">
                                         <h2 class="">Resumo e experiências</h2>
                                         <div class="barra"></div>
@@ -165,17 +267,13 @@ document.getElementById('resumo-script').addEventListener('click', function(even
                                     
                                 </div>
     `;
-
-    // Insere o HTML na div com id "conteudo"
-    document.getElementById('conteudo').innerHTML = resumoExHTML;
+    loadContent(resumoExHTML);
 });
 
 document.getElementById('port-script').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-    
-    // Define o conteúdo HTML que será inserido
+    event.preventDefault(); 
     const portHTML = `
-    <div class="portfolio" id="portfolio"> 
+    <div class="sobre-mim" id="sobre-mim"> 
                                     <div class="position">
                                         <h2 class="">Portfolio</h2>
                                         <div class="barra"></div>
@@ -251,55 +349,53 @@ document.getElementById('port-script').addEventListener('click', function(event)
                                         </div>
                                     </div>
     `;
-
-    // Insere o HTML na div com id "conteudo"
-    document.getElementById('conteudo').innerHTML = portHTML;
+    loadContent(portHTML);
 });
 
 document.getElementById('contato-script').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-    
-    // Define o conteúdo HTML que será inserido
+    event.preventDefault(); 
     const contatoHTML = `
-    <div class="position">
-<h2 class="">Contato</h2>
-<div class="barra"></div>
-</div>
-
-
-<div class="container">
-<div id="google">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58488.43177279768!2d-46.82494890975711!3d-23.621291261968974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce546123a13c61%3A0x1f856c4bbae6eb84!2sTabo%C3%A3o%20da%20Serra%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1727467867630!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-
-<div class="mt-5">
-    <h2>Formulario de Contato</h2>
-
-    <div>
-        <form action="">
-            <div class="row d-flex justify-content-round">
-                <div class="col-6">
-                    <input type="text" name="nome" id="nome" placeholder="Nome Completo">
-                </div>
-                <div class="col-6">
-                    <input type="email" name="email" id="email" placeholder="Endereço de E-mail">
-                </div>
-                <div class="col-12">
-                    <textarea name="mensagem" id="mensagem" placeholder="Sua Mensagem"></textarea>
-                </div>    
-                <div class="col d-flex justify-content-end mt-4 mb-4">
-                    <button>Enviar Mensagem</button>
-                </div>
-            </div>
-            
-        </form>
+    <div class="sobre-mim" id="sobre-mim"> 
+        <div class="position">
+        <h2 class="">Contato</h2>
+        <div class="barra"></div>
     </div>
-</div>
-</div>
-    `;
 
-    // Insere o HTML na div com id "conteudo"
-    document.getElementById('conteudo').innerHTML = contatoHTML;
+
+        <div class="container">
+        <div id="google">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58488.43177279768!2d-46.82494890975711!3d-23.621291261968974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce546123a13c61%3A0x1f856c4bbae6eb84!2sTabo%C3%A3o%20da%20Serra%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1727467867630!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="mt-5">
+            <h2>Formulario de Contato</h2>
+
+            <div>
+                <form action="">
+                    <div class="row d-flex justify-content-round">
+                        <div class="col-6">
+                            <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+                        </div>
+                        <div class="col-6">
+                            <input type="email" name="email" id="email" placeholder="Endereço de E-mail">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="mensagem" id="mensagem" placeholder="Sua Mensagem"></textarea>
+                        </div>    
+                        <div class="col d-flex justify-content-end mt-4 mb-4">
+                            <button>Enviar Mensagem</button>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    `;
+    loadContent(contatoHTML);
 });
+
+// Chama a função para carregar o conteúdo padrão ao abrir a página
+window.onload = loadDefaultContent;
 
 
