@@ -119,11 +119,11 @@ body {
 }
 
 .fundo-nav a:hover {
-    color:  rgb(133, 133, 133);
+    color: rgb(133, 133, 133);
 }
 
-.fundo-nav a:active {
-    color:  rgb(206, 164, 87);
+.nav-link.active {
+    color: rgb(206, 164, 87) !important; /* Define a cor que você deseja */
 }
 
 /*Sobre mim*/
