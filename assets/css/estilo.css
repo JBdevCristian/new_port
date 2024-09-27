@@ -201,3 +201,30 @@ body {
 .resumo-title h4 {
     margin-left: 10px;
 }
+
+/*Portifolio*/
+
+.filtro-port {
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.filtro-port ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Exibe os itens em linha (horizontal) */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda (pode ajustar conforme necessário) */
+}
+
+.filtro-port li {
+    display: inline-block; /* Alinha os itens horizontalmente */
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.filtro-port li:hover {
+    color: rgb(255, 185, 56); /* Cor ao passar o mouse */
+}
+
