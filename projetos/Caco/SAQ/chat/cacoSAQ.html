@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset=”UTF-8″>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="shortcut icon" href="cacoIcone.png" type="image/x-icon">
+      <link rel="stylesheet" href="Assets/css/cacoSAQ.css" type="text/css" media="all" />
+      <title>Caco</title>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+      </style>
+   </head>
+   <body>
+      <div class="bortaTop">
+         <h5 class="text-center mt-2">CACO</h5>
+      </div>
+      <div class="container">
+         <div class="caixaBot" id="mensagemPrimaria">
+            <!-- Chat bot -->
+            <div class="row d-flex">
+               <div class="col-1">
+                  <div class="box-imagem">
+                     <img src="cacoIcone.png" alt="" />
+                  </div>
+               </div>
+               <div class="col-11">
+                  <div class="ms-3">
+                     <!--Parte texto -->
+                     <div class="box-texto">
+                        <p>Olá, sou o caco e estou aqui para tirar suas duvidas!</p>
+                     </div>
+                  </div>
+                  <!--/Parte texto -->
+               </div>
+            </div>
+         </div>
+         <!-- /Chat bot -->
+         <div class="caixaBot" id="perguntas">
+            <!-- Chat bot -->
+            <div class="row d-flex">
+               <div class="col-1">
+                  <div class="box-imagem">
+                     <img src="cacoIcone.png" alt="" />
+                  </div>
+               </div>
+               <div class="col-11">
+                  <div class="ms-3">
+                     <!--Parte texto -->
+                     <div class="box-texto">
+                        <p>Selecione uma das opções para darmos continuidade:</p>
+                        <div class="text-center botoes d-grid" name="opcao">
+                           <button id="1" value="Checkout Transparente (Paypal Plus)" class="btn btn-success">Checkout Transparente (Paypal Plus)</button>
+                           <button id="2" value="Express checkout" class="btn btn-success">Express checkout</button>
+                           <button id="3" value="Qual a diferença entre as duas integrações?" class="btn btn-success ">Qual a diferença entre as duas integrações</button>
+                           <button id="4" value="Quais as principais plataformas que são utilizadas?" class="btn btn-success ">Quais as principais plataformas que são utilizadas</button>
+                           <button id="5" value="O que transferir para Integrações?" class="btn btn-success ">O que transferir para Integrações</button>
+                           <button id="6" value="O que é necessário para o teste de pagamento?" class="btn btn-success">O que é necessário para o teste de pagamento</button>
+                           <button id="7" value="O que analisar antes de ligar para Integrações?" class="btn btn-success">O que analisar antes de ligar para Integrações</button>
+                           <button id="8" value="Botões disponíveis no PayPal" class="btn btn-success">Botões disponíveis no PayPal</button> 
+                           <button id="9" value="Recusas de pagamentos nas integrações." class="btn btn-success">Recusas de pagamentos nas integrações</button> 
+                           <button id="10" value="Pagamento Referenciado." class="btn btn-success">Pagamento Referenciado</button>
+                           <button id="11" value="O que é API?" class="btn btn-success">O que é API</button>
+                           <button id="12" value="O que é notificação de pagamentos (NIP)?" class="btn btn-success">O que é notificação de pagamentos (NIP)</button> 
+                           <button id="13" value="Solicitações" class="btn btn-success">Solicitações</button>
+                        </div>
+                     </div>
+                  </div>
+                  <!--/Parte texto -->
+               </div>
+            </div>
+         </div>
+         <!-- /Chat bot -->
+         
+         <!-- /Chat bot Carregamento -->
+
+         <div id="batePapo"></div>
+         <div id="carregamento"></div>
+
+      </div>
+      <div class="menuChat ">
+         <!--Rodape site -->
+         <div class="row d-flex">
+            <div class="col-10">
+               <!-- Parte Chat-->
+               <input class="form-control"  value="" type="text" id="perguntasUsuario" placeholder="Qual a sua duvida?" />
+            </div>
+            <div class="col-2 mt-2">
+               <div class="d-flex justify-content-center mt-2">
+                  <i onclick="pergunta()" class="fa-solid fa-paper-plane fa-xl env" id="botaoForm"></i>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+      <!--/Rodape site -->
+      <script src="chat.js" type="text/javascript" charset="utf-8"></script>
+      <script src="Assets/js/buttons.js" type="text/javascript" charset="utf-8"></script>
+      <script src="https://kit.fontawesome.com/6173e4b356.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   
+   </body>
+</html>

@@ -1,3 +1,9 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 body {
     background: #000000;
     color: white;
@@ -14,6 +20,10 @@ body {
     height: auto;
     border: 1px solid rgb(68, 68, 68);
     border-radius: 25px;
+}
+
+.fundo1 hr {
+    margin-top: -15px;
 }
 
 .fundo2 {
@@ -63,10 +73,12 @@ body {
 
 .contatos div {
     padding-left: 40px;
-    margin-bottom: 25px;
+ 
 }
 
-.contatos h4 {
+.contatos h5 {
+    margin-top: 15px;
+    font-size: 15px;
     color: #969696;
 }
 
@@ -78,6 +90,18 @@ body {
     padding-top: 10px;
     padding-right: 20px;
 }
+
+
+
+span {
+    background-color: #272727;
+    border-top: 1px solid #6d6d6d; /* Borda superior */
+    border-left: 1px solid #6d6d6d; /* Borda esquerda */
+    padding: 10px 18px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
 
 /*Parte 2*/
 
@@ -95,10 +119,11 @@ body {
     margin-right: 10px;
     margin-left: 10px;
     font-family: "Rubik", sans-serif;
+    transition: 0.7s;
 }
 
 .fundo-nav a:hover {
-    color:  rgb(255, 185, 56)
+    color:  rgb(133, 133, 133);
 }
 
 /*Sobre mim*/
@@ -205,6 +230,7 @@ body {
 /*Portifolio*/
 
 .filtro-port {
+    margin-top: 15px;
     padding: 20px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
 }
@@ -222,9 +248,73 @@ body {
     display: inline-block; /* Alinha os itens horizontalmente */
     font-size: 13px;
     cursor: pointer;
+    transition: 0.7s;
 }
 
 .filtro-port li:hover {
-    color: rgb(255, 185, 56); /* Cor ao passar o mouse */
+    color: rgb(133, 133, 133); /* Cor ao passar o mouse */
 }
+
+/*Projetos*/
+
+.bloco-text {
+    margin-top: 15px;
+}
+
+.bloco-text h5{
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+
+.bloco-text p{
+    color: #969696;
+}
+
+.bloco-image-container {
+    width: 270px; /* Largura do fundo */
+    height: 150px; /* Altura do fundo */
+    background-color: #333; /* Fundo visível */
+    border-radius: 10px; /* Bordas arredondadas no fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+    margin-bottom: 10px;
+    position: relative; /* Para posicionar o ícone corretamente */
+}
+
+.bloco-image {
+    position: relative; /* Para posicionar o ícone em relação a este contêiner */
+}
+
+.bloco-image img {
+    width: 255px; /* Inicialmente menor que o fundo */
+    border-radius: 5px; /* Mesmas bordas da imagem */
+    transition: transform 0.2s ease, width 0.2s ease, filter 0.2s ease; /* Suave ao hover */
+}
+
+.bloco-image-container:hover .bloco-image img {
+    width: 270px; /* Tamanho da imagem aumenta para cobrir o fundo */
+    filter: brightness(0.5); /* Escurece a imagem */
+}
+
+.icone-ex1 {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Move o ícone para o centro */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease; /* Transição suave */
+    background-color: #414141;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.bloco-image-container:hover .icone-ex1 {
+    opacity: 1; /* Aparece ao fazer hover na imagem */
+}
+
+
+
+
 

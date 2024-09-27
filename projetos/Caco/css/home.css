@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    font-family: "Rubik", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    
+}
+
+#body {
+  background-color: #4949f8;
+  color: white;
+  background-image: url(../Imagens/foundever.png);
+  background-size: 100px;
+}
+
+
+
+.cacos img {
+  filter: grayscale(100%);
+  margin: auto;
+  display: block;
+  width: 300px;
+  border-radius: 50px;
+  transition: 0.3s; 
+  cursor: pointer;
+}
+
+.cacos .img1:hover {
+  filter: grayscale(0);
+  width: 350px;
+  background-color: #ff951d;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 100px;
+}
+
+.cacos .img2:hover {
+  filter: grayscale(0);
+  width: 350px;
+  background-color: #ffdd1d;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 100px;
+}
+
+.fundos {
+  margin-top: 150px;
+  border-radius: 100px;
+}
+
+
+/*Rodape*/
+.rodape {
+  background-color: #2D2DAB;
+}
+
+
+
