@@ -1,3 +1,4 @@
+
 function loadDefaultContent() {
     const sobreMimHTML = `
     <div class="sobre-mim" id="sobre-mim"> 
@@ -110,7 +111,7 @@ function loadContent(contentHTML) {
 document.getElementById('sobre-script').addEventListener('click', function(event) {
     event.preventDefault(); 
     loadContent(`
-        <div class="sobre-mim" id="sobre-mim"> 
+        <div class="sobre-mim" id="sobre"> 
         <div class="position">
             <h2 class="">Sobre mim</h2>
             <div class="barra"></div>
@@ -213,7 +214,7 @@ document.getElementById('sobre-script').addEventListener('click', function(event
 document.getElementById('resumo-script').addEventListener('click', function(event) {
     event.preventDefault(); 
     const resumoExHTML = `
-    <div class="sobre-mim" id="sobre-mim"> 
+    <div class="sobre-mim" id="resumo"> 
                                     <div class="position">
                                         <h2 class="">Resumo e experiências</h2>
                                         <div class="barra"></div>
@@ -282,16 +283,16 @@ document.getElementById('port-script').addEventListener('click', function(event)
                                     <div class="filtro-port">
                                         <ul>
                                             <li>
-                                                <a href="">Todas</a>
+                                                <a href="#">Todas</a>
                                             </li>
                                             <li>
-                                                <a href="">Web Designs</a>
+                                                <a href="#">Web Designs</a>
                                             </li>
                                             <li>
-                                                <a href="">Aplicações</a>
+                                                <a href="#">Aplicações</a>
                                             </li>
                                             <li>
-                                                <a href="">Desenvolvimento web</a>
+                                                <a href="#">Desenvolvimento web</a>
                                             </li>
                                         </ul>
                                     </div>
