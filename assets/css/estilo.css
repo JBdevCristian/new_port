@@ -306,6 +306,20 @@ body {
     filter: brightness(0.5); /* Escurece a imagem */
 }
 
+/* Media Queries para responsividade */
+@media (max-width: 767px) {
+    .bloco-image-container {
+        width: 100%; /* Agora a largura ocupa toda a tela */
+        height: auto; /* Ajusta a altura para manter a proporção da imagem */
+    }
+
+    .bloco-image img {
+        object-fit: cover; /* Continua cobrindo o fundo sem distorção */
+        width: 465px; /* Inicialmente menor que o fundo */
+        height: 300px;
+    }
+}
+
 .icone-ex1 {
     position: absolute;
     top: 50%; /* Centraliza verticalmente */
