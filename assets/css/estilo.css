@@ -378,6 +378,56 @@ button {
     border-radius: 10px;
 }
 
+/*Navbar - Mobile */
+
+
+
+/* Rodapé - Navbar */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Para centralizar a navbar */
+    background-color: rgba(43, 43, 43, 0.774);
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    padding: 10px 0;
+    z-index: 9999; /* Para garantir que fique acima de outros elementos */
+    display: none;
+}
+
+/* Estilo para o menu */
+.nav-mobile ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-mobile ul li {
+    margin: 0 15px;
+}
+
+.nav-mobile ul li a {
+    text-decoration: none;
+    color: #fff; /* Texto branco */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-mobile ul li a:hover {
+    color: rgb(255, 185, 56); /* Cor de destaque no hover */
+}
+
+/* Mostrar a navbar apenas em telas menores que 996px */
+@media (max-width: 996px) {
+    .nav-mobile {
+        display: block; /* Exibe a navbar apenas em telas menores que 996px */
+    }
+}
+
+
 
 
 
