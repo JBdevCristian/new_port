@@ -9,9 +9,10 @@
         <div class="filtro d-md-none mt-3 mb-2">
             <select name="" id="">
                 <option value="">--selecione uma categoria--</option>
-                <option value="">Web Designs</option>
-                <option value="">Aplicações</option>
-                <option value="">Desenvolvimento web</option>
+                <option value="Todas">Todas</option>
+                <option value="Web Design">Web Design</option>
+                <option value="Aplicações">Aplicações</option>
+                <option value="Desenvolvimento web">Desenvolvimento web</option>
             </select>
         </div>
     
@@ -21,7 +22,7 @@
                     <a href="#">Todas</a>
                 </li>
                 <li>
-                    <a href="#">Web Designs</a>
+                    <a href="#">Web Design</a>
                 </li>
                 <li>
                     <a href="#">Aplicações</a>
@@ -34,7 +35,8 @@
     
         <div class="container mt-3">
             <div class="row">
-                <div class="col">
+
+                <div class="col" data-category="Aplicações">
                     <div class="bloco-image-container">
                         <div class="bloco-image">
                             <img src="./projetos/Caco/caco.jpg" alt="">
@@ -51,7 +53,7 @@
                     </div>
                 </div>
                 
-                <div class="col">
+                <div class="col" data-category="Desenvolvimento web">
                     <div class="bloco-image-container">
                         <div class="bloco-image">
                             <img src="./projetos/laroc/laroc.jpg" alt="">
@@ -68,8 +70,8 @@
                     </div>
                 </div>
     
-                <div class="col">
-                    <div class="bloco-image-container">
+                <div class="col" data-category="Web Design">
+                    <div class="bloco-image-container" >
                         <div class="bloco-image">
                             <img src="./projetos/finans/imagem.png" alt="">
                             <div class="icone-ex1">
@@ -99,4 +101,40 @@
 </style>
 <script>
     ScrollReveal().reveal('.col', {duration: 500, scale: 0.6})
+
+        // Função para filtrar projetos
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.col');
+    
+            projects.forEach(project => {
+                const projectCategory = project.getAttribute('data-category');
+                
+                // Mostra ou oculta projetos com base na categoria selecionada
+                if (category === 'Todas' || projectCategory === category) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+    
+        // Gerencia o clique nos filtros do menu
+        document.querySelectorAll('.filtro-port ul li a').forEach(filter => {
+            filter.addEventListener('click', (event) => {
+                event.preventDefault(); // Evita comportamento padrão do link
+                const category = event.target.textContent.trim();
+                filterProjects(category);
+            });
+        });
+    
+        // Gerencia o dropdown de filtro para dispositivos móveis
+        document.querySelector('.filtro select').addEventListener('change', (event) => {
+            const category = event.target.value;
+            filterProjects(category);
+        });
+    
+        // Exibe todos os projetos no início
+        filterProjects('Todas');
+
+    
 </script>
