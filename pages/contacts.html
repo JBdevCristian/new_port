@@ -15,17 +15,20 @@
             <h2>Formulario de Contato</h2>
     
             <div>
-                <form action="">
+                <form action="https://formsubmit.co/jbcristian78@gmail.com" method="post">
                     <div class="row d-flex justify-content-round">
                         <div class="col-6">
-                            <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+                            <input type="text" name="name" id="nome" placeholder="Nome Completo">
                         </div>
                         <div class="col-6">
                             <input type="email" name="email" id="email" placeholder="Endereço de E-mail">
                         </div>
                         <div class="col-12">
-                            <textarea name="mensagem" id="mensagem" placeholder="Sua Mensagem"></textarea>
+                            <textarea name="message" id="mensagem" placeholder="Sua Mensagem"></textarea>
                         </div>    
+
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://jbdevcristian.github.io/email.html">
                         <div class="col d-flex justify-content-end mt-4 mb-4">
                             <button>Enviar Mensagem</button>
                         </div>
