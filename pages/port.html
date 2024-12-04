@@ -5,8 +5,17 @@
             <h2 class="">Portfolio</h2>
             <div class="barra"></div>
         </div>
+
+        <div class="filtro d-md-none mt-3 mb-2">
+            <select name="" id="">
+                <option value="">--selecione uma categoria--</option>
+                <option value="">Web Designs</option>
+                <option value="">Aplicações</option>
+                <option value="">Desenvolvimento web</option>
+            </select>
+        </div>
     
-        <div class="filtro-port">
+        <div class="filtro-port d-none d-md-block">
             <ul>
                 <li>
                     <a href="#">Todas</a>
@@ -79,6 +88,15 @@
             </div>
         </div>
 </body>
+<style>
+    .filtro select {
+        border: 1px solid #464646;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(43, 43, 43, 0.774);
+        color: #ccc;
+    }
+</style>
 <script>
     ScrollReveal().reveal('.col', {duration: 500, scale: 0.6})
 </script>
